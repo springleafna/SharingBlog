@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis配置文件-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springleaf.oneblog.mapper.ArticleMapper">
+    <select id="findAllArticles" resultType="com.springleaf.oneblog.pojo.Article">
+        select * from ms_article order by create_date desc, weight desc
+    </select>
+</mapper>
